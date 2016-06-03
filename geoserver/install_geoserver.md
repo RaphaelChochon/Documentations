@@ -88,6 +88,6 @@ Il semble que de cliquer sur le bouton ``Recharger`` en bas de page de ``État d
 Pour cela, il faut aller dans la manager de Tomcat : http://IP_DU_SERVEUR:8080/manager/html
 Entrer ID et MDP renseigné en partie 1.3 de ce tuto, puis cliquer sur « recharger » dans la ligne correspondant à geoserver :
 <br>
-![Manager web Tomcat](geoserver/img/manager_tomcat.jpg)
+![Manager web Tomcat](img/manager_tomcat.jpg)
 <br><br>
 A partir de ce moment on peut controler que le nouveau chemin a bien été pris en compte par Geoserver dans son interface web, dans ``État du service``
