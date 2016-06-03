@@ -22,10 +22,10 @@
 On créé un user de connexion pour le manager web de Tomcat
 Pour cela, édition du fichier ``tomcat-users.xml`` de cette manière : ``sudo nano /etc/tomcat7/tomcat-users.xml``
 
-``
+```
 	<role rolename="manager-gui"/>
 	<user username="utilpnm" password="MON_MOT_DE_PASSE" roles="manager-gui"/>
-``
+```
 
 
 #### 2 - Installation de Geoserver
