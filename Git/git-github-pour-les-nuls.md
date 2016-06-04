@@ -52,82 +52,82 @@ Liste et détail de quelques commandes que j'utilise assez régulièrement, et d
 #### Commandes généralistes
 
 
+Une commande qu'on oublie trop souvent quand on ne se rappel plus le nom ou la fonction d'une commande
 ```
 	git --help
 ```
-Une commande qu'on oublie trop souvent quand on ne se rappel plus le nom ou la fonction d'une commande
 
 ***
 
+Pour initialiser git dans le répertoire courant
 ```
 	git init
 ```
-Va initialiser git dans le répertoire courant
 
 ***
 
+Pour télécharger un projet et tout son historique de versions
 ```
 	git clone [url ou chemin vers le dossier si en local]
 ```
-Télécharge un projet et tout son historique de versions
 
 <br>
 #### Effectuer des modifications...
 
 
+Cette commande va nous retourner l’état des fichiers que track Git, afin de savoir s’il faut que nous fassions un commit. Ci-dessous, deux fichiers ont été modifiées :
 ```
 	git status
 ```
-Cette commande va nous retourner l’état des fichiers que track Git, afin de savoir s’il faut que nous fassions un commit. Ci-dessous, deux fichiers ont été modifiées :
 <br>
 ![git status](img/status.jpg)
 
 ***
 
+Permet d'ajouter TOUS les fichiers au suivi de version de git (A effectuer dés que l'on modifie ou ajoute un fichier dans notre répertoire de travail). Sans ça, les fichiers ne seront pas inclus aux éventuels futurs commits.
+On peut remplacer le ``.`` par le nom exact du ou des fichiers que l'on veut ajouter (Cela peut par exemple permettre de décomposer nos commits).
 ```
 	git add .
 ```
-Permet d'ajouter TOUS les fichiers au suivi de version de git (A effectuer dés que l'on modifie ou ajoute un fichier dans notre répertoire de travail). Sans ça, les fichiers ne seront pas inclus aux éventuels futurs commits.
-On peut remplacer le ``.`` par le nom exact du ou des fichiers que l'on veut ajouter (Cela peut par exemple permettre de décomposer nos commits).
 
 ***
 
+Permet de commiter nos fichiers et donc d'effectuer un instantané de notre répertoire de travail, de façon permanente dans l'historique de version de git.
+A noter que pour être effectué, il faut avoir au préalable ajouté des fichiers au suivi avec ``git add`` OU ajouter le paramètre ``-a`` juste avant le ``-m``.
 ```
 	git commit -m "Commit initial - Ici on entre le texte que l'on veut"
 ```
-Permet de commiter nos fichiers et donc d'effectuer un instantané de notre répertoire de travail, de façon permanente dans l'historique de version de git.
-A noter que pour être effectué, il faut avoir au préalable ajouté des fichiers au suivi avec ``git add`` OU ajouter le paramètre ``-a`` juste avant le ``-m``.
 
 ***
 
+Pour montrer les modifications non indexées sur les fichiers
 ```
 	git diff
 ```
-Montre les modifications non indexées sur les fichiers
 
 ***
 
+Pour montrer les différences de fichier entre la version indexée et la dernière version
 ```
 	git diff --staged
 ```
-Montre les différences de fichier entre la version indexée et la dernière version
 
 ***
 
+Si nous voulons rectifier le dernier commit fait car nous avons oublié d’y ajouter un fichier modifié nous pouvons le faire avec la commande ``git commit --amend``
+Cela nous ouvre alors le dernier commit avec l’éditeur de texte par défaut (vi). Nous pouvons alors le modifier puis à nouveau le soumettre.
 ```
 	git commit -m "Mon commentaire initial"
 	git add fichier_oublie
 	git commit --amend
 ```
-Si nous voulons rectifier le dernier commit fait car nous avons oublié d’y ajouter un fichier modifié nous pouvons le faire avec la commande ``git commit --amend``
-Cela nous ouvre alors le dernier commit avec l’éditeur de texte par défaut (vi). Nous pouvons alors le modifier puis à nouveau le soumettre.
 
 ***
 
+Pour enlever le fichier de l'index, mais conserve son contenu
 ```
 	git reset [fichier]
 ```
-Enleve le fichier de l'index, mais conserve son contenu
 
 ***
 
@@ -155,10 +155,10 @@ Ou de façon plus simple en utilisant « ungit », le SHA-1 abrégé est ici dir
 ***
 
 :boom: :bangbang: <span style="color: #fb4141">**ATTENTION**</span> :bangbang: :boom:
+<span style="color: #fb4141">**Supprime tout l'historique et les modifications effectuées après le commit spécifié**</span>
 ```
 	git reset --hard [le SHA-1 abrégé du commentaire précédent celui (ou ceux) que nous voulons supprimer]
 ```
-<span style="color: #fb4141">**Supprime tout l'historique et les modifications effectuées après le commit spécifié**</span>
 
 ***
 
@@ -169,41 +169,42 @@ Ou de façon plus simple en utilisant « ungit », le SHA-1 abrégé est ici dir
 
 <br>
 ![Git et son système de branche](img/git_branch.png)
+<br>
 
+Pour lister toutes les branches locales dans le dépôt courant
 ```
 	git branch
 ```
-Liste toutes les branches locales dans le dépôt courant
 
 ***
 
+Pour créer une nouvelle branche
 ```
 	git branch [nom-de-branche]
 ```
-Crée une nouvelle branche
 
 ***
 
+Pour basculer sur la branche spécifiée et met à jour le répertoire de travail (et ça c'est magique !)
 ```
 	git checkout [nom-de-branche]
 ```
-Bascule sur la branche spécifiée et met à jour le répertoire de travail (et ça c'est magique !)
 
 ***
 
+Pour supprimer la branche spécifiée
+Si la branche est "pleine" ou n'a pas été fusionnée avec une autre, alors il faudra utiliser ``git branch -D [nom-de-branche]``
+**Attention on perdra toutes les modifications qui y ont été effectuées !**
 ```
 	git branch -d [nom-de-branche]
 ```
-Supprime la branche spécifiée
-Si la branche est "pleine" ou n'a pas été fusionnée avec une autre, alors il faudra utiliser ``git branch -D [nom-de-branche]``
-**Attention on perdra toutes les modifications qui y ont été effectuées !**
 
 ***
 
+Pour fusionner dans la branche courante l'historique de la branche spécifiée
 ```
 	git merge [nom-de-branche]
 ```
-Fusionne dans la branche courante l'historique de la branche spécifiée
 
 ***
 
@@ -213,25 +214,27 @@ Fusionne dans la branche courante l'historique de la branche spécifiée
 
 :point_right: Commandes de base en console Linux, mais avec Git :point_left:
 
+***
+
+Pour supprimer le fichier du répertoire de travail et met à jour l'index
 ```
 	git rm [fichier]
 ```
-Supprime le fichier du répertoire de travail et met à jour l'index
 
 ***
 
+Pour supprimer le fichier du système de suivi de version mais le préserve localement.
+A comparer avec ``git reset [fichier]`` ?! Pas encore testé !
 ```
 	git rm --cached [fichier]
 ```
-Supprime le fichier du système de suivi de version mais le préserve localement.
-A comparer avec ``git reset [fichier]`` ?! Pas encore testé !
 
 ***
 
+Pour renommer le fichier et prépare le changement pour un commit
 ```
 	git mv [fichier-nom] [fichier-nouveau-nom]
 ```
-Renomme le fichier et prépare le changement pour un commit
 
 ***
 
@@ -239,32 +242,32 @@ Renomme le fichier et prépare le changement pour un commit
 #### Vérifier l'historique des versions
 
 
+Pour montrer l'historique des versions pour la branche courante
 ```
 	git log
 ```
-Montre l'historique des versions pour la branche courante
 
 ***
 
+Pour montrer l'historique des versions, y compris les actions de renommage, pour le fichier spécifié
 ```
 	git log --follow [fichier]
 ```
-Montre l'historique des versions, y compris les actions de renommage, pour le fichier spécifié
 
 ***
 
 
+Pour montrer les différences de contenu entre deux branches
 ```
 	git diff [premiere-branche]...[deuxieme-branche]
 ```
-Montre les différences de contenu entre deux branches
 
 ***
 
+Pour montrer les modifications de métadonnées et de contenu inclues dans le commit spécifié
 ```
 	git show [commit]
 ```
-Montre les modifications de métadonnées et de contenu inclues dans le commit spécifié
 
 ***
 
@@ -272,36 +275,36 @@ Montre les modifications de métadonnées et de contenu inclues dans le commit s
 #### Branches distantes, synchronisations, etc...
 
 
+Pour récupèrer tout l'historique du dépôt nommé.<br>
+@xavier-pnm à creuser pour récupérer l'historique de [Geonature](https://github.com/PnEcrins/GeoNature)
 ```
 	git fetch [nom-de-depot]
 ```
-Récupère tout l'historique du dépôt nommé.<br>
-@xavier-pnm à creuser pour récupérer l'historique de [Geonature](https://github.com/PnEcrins/GeoNature)
 
 ***
 
+Pour fusionner la branche du dépôt dans la branche locale courante
 ```
 	git merge [nom-de-depot]/[branche]
 ```
-Fusionne la branche du dépôt dans la branche locale courante
 
 ***
 
+Pour envoyer tous les commits de la branche locale vers GitHub
 ```
 	git push [alias] [branche]
 ```
-Envoie tous les commits de la branche locale vers GitHub
 
 ***
 
+Pour récupèrer tout l'historique du dépôt nommé et incorpore les modifications
 ```
 	git pull [alias] [branche]
 ```
-Récupère tout l'historique du dépôt nommé et incorpore les modifications
 
 ***
-Pour ajouter une connexion distante, que ce soit un serveur en SSH, ou un dépôt GitHub comme ici :
 
+Pour ajouter une connexion distante, que ce soit un serveur en SSH, ou un dépôt GitHub comme ici :
 ```
 	$ git remote add github https://github.com/RaphaelChochon/documentations.git
 ```

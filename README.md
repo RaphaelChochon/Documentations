@@ -1,6 +1,6 @@
 ## Documentations tutos et mémos divers
 
-:memo: Dépôt contenant diverses documentations réalisées petit à petit au fil de mes expériences...
+:memo: Dépôt contenant diverses documentations réalisées petit à petit au fil de mes expériences... et de mon temps libre !
 
 
 ###### Fait et à faire :
