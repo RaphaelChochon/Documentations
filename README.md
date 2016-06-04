@@ -10,4 +10,5 @@
 * [ ] Installation de NodeJS sur Debian
 * [ ] Installation de NodeJS sur Windows (et tuto d'install de UNGIT)
 <br><br>
-* [ ] Mémo perso d'installation de Weewx sur RPI (Asso Nice Météo 06)
+* [x] Mémo perso d'installation de Weewx sur RPI (Asso Nice Météo 06)
+* [ ] Scripts et mémo pour configuration d'une PiCams, ftp, récupération de data.txt etc (Asso Nice Météo 06)
