@@ -28,7 +28,7 @@ Première chose à faire après installation propre sur son poste de travail :
 * Le troisième permet d’activer la colorisation de la sortie en ligne de commande, cependant elle ne parait plus nécessaire, puisque ce serait maintenant le comportement par défaut à l’installation (pour une installation sur environnement Windows uniquement).
 * La quatrième permet de convertir les retours-chariots pour le système UNIX (donc nécessaire uniquement sous environnement Windows)
 
-<br><br>
+<br>
 
 Si à l’installation nous avons choisi d’importer dans le git bash les commandes de bases unix, alors nous pouvons ensuite nous en servir comme dans Linux pour se déplacer par exemple dans l’arborescence de nos projets :
 ```
@@ -48,8 +48,8 @@ Création du répertoire du projet, puis initialisation de Git à l’intérieur
 ### 4 - Commandes de bases utiles
 Liste et détail de quelques commandes que j'utilise assez régulièrement, et d'autres moins souvent et qui requiert justement un mémo :
 
-<br><br>
-##### Commandes généralistes
+<br>
+#### Commandes généralistes
 
 
 ```
@@ -71,8 +71,8 @@ Va initialiser git dans le répertoire courant
 ```
 Télécharge un projet et tout son historique de versions
 
-
-##### Effectuer des modifications...
+<br>
+#### Effectuer des modifications...
 
 
 ```
@@ -131,8 +131,8 @@ Enleve le fichier de l'index, mais conserve son contenu
 
 ***
 
-
-##### Supprimer un commit
+<br>
+#### Supprimer un commit
 
 
 Si après avoir fait un commit nous nous rendons compte que nous avons fait une erreur ou omis de spécifier un changement, nous pouvons aussi annuler ce commit en le supprimant, et en utilisant une commande spécifique. Cette commande permet aussi de supprimer plusieurs commit à la volée.<br>
@@ -160,8 +160,11 @@ Ou de façon plus simple en utilisant « ungit », le SHA-1 abrégé est ici dir
 ```
 <span style="color: #fb4141">**Supprime tout l'historique et les modifications effectuées après le commit spécifié**</span>
 
+***
 
-##### Les branches
+
+<br>
+#### Les branches
 
 
 <br>
@@ -204,8 +207,8 @@ Fusionne dans la branche courante l'historique de la branche spécifiée
 
 ***
 
-
-##### Changements au niveau des noms de fichiers
+<br>
+#### Changements au niveau des noms de fichiers
 
 
 :point_right: Commandes de base en console Linux, mais avec Git :point_left:
@@ -232,8 +235,8 @@ Renomme le fichier et prépare le changement pour un commit
 
 ***
 
-
-##### Changements au niveau des noms de fichiers
+<br>
+#### Changements au niveau des noms de fichiers
 
 
 ```
@@ -265,14 +268,14 @@ Montre les modifications de métadonnées et de contenu inclues dans le commit s
 
 ***
 
-
-##### Branches distantes, synchronisations, etc...
+<br>
+#### Branches distantes, synchronisations, etc...
 
 
 ```
 	git fetch [nom-de-depot]
 ```
-Récupère tout l'historique du dépôt nommé
+Récupère tout l'historique du dépôt nommé.<br>
 @xavier-pnm à creuser pour récupérer l'historique de [Geonature](https://github.com/PnEcrins/GeoNature)
 
 ***
@@ -298,8 +301,8 @@ Récupère tout l'historique du dépôt nommé et incorpore les modifications
 
 ***
 
-
-##### Résoudre des conflits
+<br>
+#### Résoudre des conflits
 
 :soon:
 
@@ -309,5 +312,5 @@ Récupère tout l'historique du dépôt nommé et incorpore les modifications
 
 <br><br><br><br>
 ###### Source
-* [Doc officielle](https://github.com/github/training-kit/blob/master/downloads/fr/github-git-cheat-sheet.md)
+* [Doc officielle](https://github.com/github/training-kit/blob/master/downloads/fr/github-git-cheat-sheet.md) : Inspiration de la doc officielle en :fr: et ajout de ma part
 <br>
