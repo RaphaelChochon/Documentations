@@ -236,7 +236,7 @@ Renomme le fichier et prépare le changement pour un commit
 ***
 
 <br>
-#### Changements au niveau des noms de fichiers
+#### Vérifier l'historique des versions
 
 
 ```
@@ -300,6 +300,14 @@ Envoie tous les commits de la branche locale vers GitHub
 Récupère tout l'historique du dépôt nommé et incorpore les modifications
 
 ***
+Pour ajouter une connexion distante, que ce soit un serveur en SSH, ou un dépôt GitHub comme ici :
+
+```
+	$ git remote add github https://github.com/RaphaelChochon/documentations.git
+```
+
+***
+
 
 <br>
 #### Résoudre des conflits
