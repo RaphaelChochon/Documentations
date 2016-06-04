@@ -48,7 +48,7 @@ Création du répertoire du projet, puis initialisation de Git à l’intérieur
 ### 4 - Commandes de bases utiles
 Liste et détail de quelques commandes que j'utilise assez régulièrement, et d'autres moins souvent et qui requiert justement un mémo :
 
-
+<br><br>
 ##### Commandes généralistes
 
 
@@ -135,7 +135,7 @@ Enleve le fichier de l'index, mais conserve son contenu
 ##### Supprimer un commit
 
 
-Si après avoir fait un commit nous nous rendons compte que nous avons fait une erreur ou omis de spécifier un changement, nous pouvons aussi annuler ce commit en le supprimant, et en utilisant une commande spécifique. Cette commande permet aussi de supprimer plusieurs commit à la volée.
+Si après avoir fait un commit nous nous rendons compte que nous avons fait une erreur ou omis de spécifier un changement, nous pouvons aussi annuler ce commit en le supprimant, et en utilisant une commande spécifique. Cette commande permet aussi de supprimer plusieurs commit à la volée.<br>
 :boom: :bangbang: <span style="color: #fb4141">**Cependant, il faut faire attention à ne supprimer que des commentaires qui n’ont pas encore été envoyés vers un serveur distant (push) où d’autres personnes sont susceptibles de travailler dessus.**</span> :bangbang: :boom:
 
 ```
