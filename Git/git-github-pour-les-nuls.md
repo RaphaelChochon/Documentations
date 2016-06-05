@@ -313,7 +313,59 @@ Pour ajouter une connexion distante, que ce soit un serveur en SSH, ou un dépô
 
 
 <br>
+#### Ajout d'une release, d'un "tag", d'une étiquette...
+
+
+L'étiquette la plus utilisée, est l'étiquette annotée. Elle s'apparente à un numéro de version de l'appli ou du dépôt.
+Pour lister les tags d'un dépôt :
+```
+	git tag
+```
+Pour filtrer les tags :
+```
+	git tag -l 'v1.8.5*'
+```
+
+***
+
+Pour créer un tag sur son dépôt :
+```
+	git tag -a v1.0.0 -m 'ma version 1.4'
+```
+On peut visualiser les données de l’étiquette à côté du commit qui a été marqué en utilisant la commande ``git show``.
+
+***
+
+Pour étiquetter après coup :
+```
+	$ git log --pretty=oneline
+	15027957951b64cf874c3557a0f3547bd83b3ff6 Fusion branche 'experimental'
+	a6b4c97498bd301d84096da251c98a07c7723e65 Début de l'écriture support
+	0d52aaab4479697da7686c15f77a3d64d9165190 Un truc de plus
+	6d52a271eda8725415634dd79daabbc4d9b6008e Fusion branche 'experimental'
+	0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc ajout d'une fonction de validatn
+	4682c3261057305bdd616e23b64b0857d832627b ajout fichier afaire
+	166ae0c4d3f420721acbb115cc33848dfcc2121a début de l'ecriture support
+	9fceb02d0ae598e95dc970b74767f19372d61af8 mise à jour rakefile			<-- On a oublié de taguer
+	964f16d36dfccde844893cac5b347e7b3d44abbc validation afaire
+	8a5cbc430f1a9c3d00faaeffd07798508422908a mise à jour lisezmoi
+```
+Si on veut étiquetter au niveau de "mise à jour rakefile" alors :
+```
+	git tag -a v1.2 9fceb02
+```
+
+***
+
+Enfin, pour "pusher" un tag, il ya une méthode particulière :
+```
+	git push github [nom-du-tag]
+```
+
+<br>
 #### Résoudre des conflits
+
+
 
 :soon:
 
