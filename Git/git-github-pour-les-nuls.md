@@ -275,8 +275,14 @@ Pour montrer les modifications de métadonnées et de contenu inclues dans le co
 #### Branches distantes, synchronisations, etc...
 
 
+Pour ajouter une connexion distante, que ce soit un serveur en SSH, ou un dépôt GitHub comme ici :
+```
+	$ git remote add github https://github.com/RaphaelChochon/documentations.git
+```
+
+***
+
 Pour récupèrer tout l'historique du dépôt nommé.<br>
-@xavier-pnm à creuser pour récupérer l'historique de [Geonature](https://github.com/PnEcrins/GeoNature)
 ```
 	git fetch [nom-de-depot]
 ```
@@ -300,13 +306,6 @@ Pour envoyer tous les commits de la branche locale vers GitHub
 Pour récupèrer tout l'historique du dépôt nommé et incorpore les modifications
 ```
 	git pull [alias] [branche]
-```
-
-***
-
-Pour ajouter une connexion distante, que ce soit un serveur en SSH, ou un dépôt GitHub comme ici :
-```
-	$ git remote add github https://github.com/RaphaelChochon/documentations.git
 ```
 
 ***
