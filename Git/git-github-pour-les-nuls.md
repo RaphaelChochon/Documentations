@@ -310,6 +310,14 @@ Pour récupèrer tout l'historique du dépôt nommé et incorpore les modificati
 
 ***
 
+Pour sélectionner un commit quelconque et l'appliquer sur la branche actuelle
+```
+	git cherry-pick d42c389f
+```
+Nécéssite au préalable d'avoir fait un ``fetch`` si on veut picorer depuis un dépôt distant
+
+***
+
 
 <br>
 #### Ajout d'une release, d'un "tag", d'une étiquette...
